@@ -42,7 +42,7 @@ export default function App() {
       </Section>
 
       <Section title="Statistics">
-        {bad === 0 && neutral === 0 && good === 0 ? (
+        {!countTotalFeedback() ? (
           <Notification message="There is no feedback" />
         ) : (
           <StatList
